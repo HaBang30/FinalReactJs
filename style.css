@@ -66,6 +66,9 @@ dody {
     width: 100%;
 }
 
+
+/* code index.html here */
+
 #header {
     display: flex;
     align-items: center;
@@ -117,6 +120,15 @@ dody {
     bottom: -4px;
     left: 20px;
 }
+
+#mobile {
+    display: none;
+}
+#close {
+    display: none;
+}
+
+
 #hero {
     background-image: url("img/hero.jpg");
     width: 100%;
@@ -475,22 +487,63 @@ dody {
     
 }
 
-@media (max-width: 799px) {
+
+
+
+
+
+
+
+
+
+
+
+/* adjust suitable with all sreens */
+
+@media(max-width:799px) {
     #navbar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
-        top: 0;
-        left: 70%;
-        height: 100vh;
+        top: 0px;
+        right: -300px;
         width: 300px;
-        background-color: #E3E6F3;
-        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        height: 100vh;
+        background-color:#E3E6F3;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.01);
         padding: 80px 0 0 10px;
     }
-    #navbar li {
-        margin-bottom: 40px;
+    #navbar.active {
+        right: 0px;
     }
+    #navbar li {
+        margin-bottom: 30px;
+    }
+    #mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #mobile li {
+        list-style: none;
+        font-size: 30px;
+        padding-left: 25px;
+    }
+    #mobile li i {
+        color: #222;
+    }
+    #lg-bag {
+        display: none;
+    }
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-size: 24px;
+    }
+    
+
 }
